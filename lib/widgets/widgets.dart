@@ -1,3 +1,3 @@
-export 'package:pukman_clickers/widgets/central_panel_widget.dart';
-export 'package:pukman_clickers/widgets/left_panel_widget.dart';
-export 'package:pukman_clickers/widgets/right_panel_widget.dart';
+export 'package:pukman_clickers/widgets/arrow_widget.dart';
+export 'package:pukman_clickers/widgets/info_container_widget.dart';
+export 'package:pukman_clickers/widgets/panel_container_widget.dart';

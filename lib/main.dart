@@ -9,8 +9,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+          scaffoldBackgroundColor: Color.fromRGBO(243, 244, 246, 1.0)),
       debugShowCheckedModeBanner: false,
-      title: 'Material App',
+      title: 'Puk-Man Clickers',
       initialRoute: '/',
       routes: {
         '/': (context) => HomePage(),
