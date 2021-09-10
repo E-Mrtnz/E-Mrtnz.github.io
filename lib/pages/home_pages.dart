@@ -10,16 +10,40 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0),
-          child: Column(
-            children: [
-              InfoContainer(
-                  width: 0.30, text: 'Total clicks among all players'),
-              Text('1,356,728'),
-              // TODO: Remover este container al terminar de disenar
-              Container(
-                height: MediaQuery.of(context).size.width * 0.53,
-                child: Row(
+          padding: const EdgeInsets.only(
+            left: 24.0,
+            right: 24.0,
+            // top: 50.0,
+          ),
+          // TODO: probar si no se ocupa y eliminar este container al terminar
+          child: Container(
+            height: double.infinity,
+            // color: Colors.green,
+            child: Column(
+              // El column es el contenedor de los paneles qur abarca todo el ancho
+              children: [
+                InfoContainer(
+                  width: 1.0,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Currently logged in as'),
+                      Column(
+                        children: [
+                          Text('Total clicks among all players'),
+                          Text('1,356,728'),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Text('Currently logged in as'),
+                          Text('Edgar M.'),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                Row(
                   children: [
                     LeftPanelWidget(),
                     SizedBox(width: 16.0),
@@ -28,11 +52,12 @@ class HomePage extends StatelessWidget {
                     RightPanelWidget(),
                   ],
                 ),
-              ),
-              // Expanded(
-              //   child: Container(color: Colors.green),
-              // )
-            ],
+                //pie de pagina
+                Expanded(
+                  child: Container(color: Colors.grey),
+                )
+              ],
+            ),
           ),
         ),
       ),

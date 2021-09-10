@@ -7,15 +7,27 @@ class RightPanelWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MyPanelContainer(
-      child: Column(
-        children: [
-          InfoContainer(text: 'Text'),
-          Center(
-            child: Text('Panel derecho'),
+    return Column(
+      children: [
+        MyPanelContainer(
+          height: 0.4,
+          child: Column(
+            children: [
+              InfoContainer(child: Text('Text')),
+              Center(
+                child: Text('Panel derecho'),
+              ),
+            ],
           ),
-        ],
-      ),
+        ),
+        SizedBox(height: 16.0),
+        MyPanelContainer(
+          height: 0.4,
+          child: Center(
+            child: Text('Anuncios'),
+          ),
+        ),
+      ],
     );
   }
 }

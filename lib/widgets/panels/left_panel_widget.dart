@@ -10,7 +10,7 @@ class LeftPanelWidget extends StatelessWidget {
     return MyPanelContainer(
       child: Column(
         children: [
-          InfoContainer(text: 'Ranking'),
+          InfoContainer(child: Text('Ranking')),
           ArrowWidget(),
           CustomPaint(painter: ArrowContainerPaint()),
           Text('Panel izquierdo'),
