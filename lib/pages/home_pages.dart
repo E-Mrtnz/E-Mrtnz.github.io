@@ -13,51 +13,46 @@ class HomePage extends StatelessWidget {
           padding: const EdgeInsets.only(
             left: 24.0,
             right: 24.0,
-            // top: 50.0,
           ),
-          // TODO: probar si no se ocupa y eliminar este container al terminar
-          child: Container(
-            height: double.infinity,
-            // color: Colors.green,
-            child: Column(
-              // El column es el contenedor de los paneles qur abarca todo el ancho
-              children: [
-                InfoContainer(
-                  width: 1.0,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text('Currently logged in as'),
-                      Column(
-                        children: [
-                          Text('Total clicks among all players'),
-                          Text('1,356,728'),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Text('Currently logged in as'),
-                          Text('Edgar M.'),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                Row(
+          child: Column(
+            // El column es el contenedor de los paneles que abarca todo el ancho
+            children: [
+              InfoContainer(
+                width: 1.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    LeftPanelWidget(),
-                    SizedBox(width: 16.0),
-                    Expanded(child: CentralPanelWidget()),
-                    SizedBox(width: 16.0),
-                    RightPanelWidget(),
+                    Text('Currently logged in as'),
+                    Column(
+                      children: [
+                        Text('Total clicks among all players'),
+                        Text('1,356,728'),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text('Currently logged in as'),
+                        Text('Edgar M.'),
+                      ],
+                    ),
                   ],
                 ),
-                //pie de pagina
-                Expanded(
-                  child: Container(color: Colors.grey),
-                )
-              ],
-            ),
+              ),
+              Row(
+                children: [
+                  LeftPanelWidget(),
+                  SizedBox(width: 16.0),
+                  Expanded(child: CentralPanelWidget()),
+                  SizedBox(width: 16.0),
+                  RightPanelWidget(),
+                ],
+              ),
+              Expanded(
+                child: Container(
+                  color: Colors.grey,
+                ),
+              )
+            ],
           ),
         ),
       ),
@@ -99,20 +94,21 @@ Container(
 ),
  */
 
+
 /*
 ElevatedButton(
-              child: const Icon(
-                Icons.check,
-              ),
-              onPressed: () {
-                String os = Platform.operatingSystem;
-                final snackBar = SnackBar(
-                  content: Text(
-                    'La plataforma del sistema es: $os',
-                  ),
-                  action: SnackBarAction(label: 'Undo', onPressed: () {}),
-                );
-                ScaffoldMessenger.of(context).showSnackBar(snackBar);
-              },
-            ),
+  child: const Icon(
+    Icons.check,
+  ),
+  onPressed: () {
+    String os = Platform.operatingSystem;
+    final snackBar = SnackBar(
+      content: Text(
+        'La plataforma del sistema es: $os',
+      ),
+      action: SnackBarAction(label: 'Undo', onPressed: () {}),
+    );
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  },
+),
 */

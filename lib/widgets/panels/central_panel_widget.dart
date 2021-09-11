@@ -17,7 +17,7 @@ class _CentralPanelWidgetState extends State<CentralPanelWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return MyPanelContainer(
+    return PanelContainer(
       child: Column(
         children: [
           InfoContainer(child: Text('$score')),

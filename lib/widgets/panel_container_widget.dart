@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class MyPanelContainer extends StatelessWidget {
+class PanelContainer extends StatelessWidget {
   final Widget child;
   final double height;
 
-  const MyPanelContainer({
+  const PanelContainer({
     Key? key,
     required this.child,
     this.height = 0.82,
@@ -15,7 +15,6 @@ class MyPanelContainer extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width * 0.28,
       height: MediaQuery.of(context).size.height * height,
-      // height: 600,
       child: child,
       decoration: BoxDecoration(
         color: Colors.white,

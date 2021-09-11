@@ -9,7 +9,7 @@ class RightPanelWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        MyPanelContainer(
+        PanelContainer(
           height: 0.4,
           child: Column(
             children: [
@@ -21,7 +21,7 @@ class RightPanelWidget extends StatelessWidget {
           ),
         ),
         SizedBox(height: 16.0),
-        MyPanelContainer(
+        PanelContainer(
           height: 0.4,
           child: Center(
             child: Text('Anuncios'),
