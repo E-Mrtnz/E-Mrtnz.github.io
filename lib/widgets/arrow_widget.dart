@@ -1,7 +1,30 @@
 import 'package:flutter/material.dart';
 
-// ignore: use_key_in_widget_constructors
 class ArrowWidget extends StatelessWidget {
+  const ArrowWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Arrow(
+      userName: 'Anonimous',
+      score: '49,825',
+      positionPlace: '4',
+    );
+  }
+}
+
+class Arrow extends StatelessWidget {
+  const Arrow({
+    Key? key,
+    required this.userName,
+    required this.score,
+    required this.positionPlace,
+  }) : super(key: key);
+
+  final String userName;
+  final String score;
+  final String positionPlace;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,7 +41,7 @@ class ArrowWidget extends StatelessWidget {
               children: [
                 SizedBox(width: 33.0),
                 Text(
-                  '4',
+                  positionPlace,
                   style: TextStyle(color: Colors.tealAccent, fontSize: 30.0),
                 ),
               ],
@@ -30,11 +53,11 @@ class ArrowWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Edgardo M.',
+                  userName,
                   style: TextStyle(color: Colors.pink),
                 ),
                 Text(
-                  "3,545,149,825",
+                  score,
                   style: TextStyle(color: Colors.pink),
                 ),
               ],

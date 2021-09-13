@@ -13,7 +13,7 @@ class RightPanelWidget extends StatelessWidget {
           height: 0.4,
           child: Column(
             children: [
-              InfoContainer(child: Text('Text')),
+              InfoContainer(child: Text('Customize your character')),
               Center(
                 child: Text('Panel derecho'),
               ),

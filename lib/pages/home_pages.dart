@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:pukman_clickers/widgets/panels/panels.dart';
 import 'package:pukman_clickers/widgets/widgets.dart';
 
-// ignore: use_key_in_widget_constructors
 class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,6 +39,7 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
+              // CONTENEDOR DEL PANEL IZQUIERDO, CENTRAL Y DERECHO
               Row(
                 children: [
                   LeftPanelWidget(),
@@ -47,11 +49,18 @@ class HomePage extends StatelessWidget {
                   RightPanelWidget(),
                 ],
               ),
-              Expanded(
-                child: Container(
-                  color: Colors.grey,
-                ),
-              )
+              // PIE DE PAGINA
+              Expanded(child: Container(color: Colors.grey)),
+              // Expanded(
+              //   child: InfoContainer(
+              //     width: 1.0,
+              //     bottomLeft: 0.0,
+              //     bottomRight: 0.0,
+              //     topLeft: 25.0,
+              //     topRight: 25.0,
+              //     child: Text('data'),
+              //   ),
+              // )
             ],
           ),
         ),
@@ -59,56 +68,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
-/*
-// TODO: Remover este container al terminar de disenar
-Container(
-  color: Colors.red,
-  child: Column(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-      InfoContainer(
-        width: 0.30,
-        text:
-            'Total clicks among all playersTotal clicks among all players',
-      ),
-      const Text('Total clicks among all players'),
-      const Text('1,356,728'),
-      // TODO: Remover este container al terminar de disenar
-      Container(
-        height: MediaQuery.of(context).size.width * 0.50,
-        color: Colors.grey,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: const [
-            LeftPanelWidget(),
-            SizedBox(width: 16.0),
-            Expanded(child: CentralPanelWidget()),
-            SizedBox(width: 16.0),
-            RightPanelWidget(),
-          ],
-        ),
-      ),
-    ],
-  ),
-),
- */
-
-
-/*
-ElevatedButton(
-  child: const Icon(
-    Icons.check,
-  ),
-  onPressed: () {
-    String os = Platform.operatingSystem;
-    final snackBar = SnackBar(
-      content: Text(
-        'La plataforma del sistema es: $os',
-      ),
-      action: SnackBarAction(label: 'Undo', onPressed: () {}),
-    );
-    ScaffoldMessenger.of(context).showSnackBar(snackBar);
-  },
-),
-*/

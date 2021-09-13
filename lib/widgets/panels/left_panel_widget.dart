@@ -12,18 +12,16 @@ class LeftPanelWidget extends StatelessWidget {
       child: Column(
         children: [
           InfoContainer(child: Text('Ranking')),
-
           PodiumWidget(),
-
+          Column(children: [
+            SizedBox(height: 16.0),
+            ArrowWidget(
+                // userName: '',
+                // score: '',
+                ),
+          ]),
           Column(children: [SizedBox(height: 16.0), ArrowWidget()]),
           Column(children: [SizedBox(height: 16.0), ArrowWidget()]),
-          Column(children: [SizedBox(height: 16.0), ArrowWidget()]),
-          // Column(children: [SizedBox(height: 16.0), ArrowWidget()]),
-          // Column(children: [SizedBox(height: 16.0), ArrowWidget()]),
-          // Column(children: [SizedBox(height: 16.0), ArrowWidget()]),
-          // // Column(children: [ArrowWidget(), SizedBox(height: 16.0)]),
-          // Text('Panel izquierdo'),
-          // Text('${MediaQuery.of(context).size.width / 3}'),
         ],
       ),
     );
